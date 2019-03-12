@@ -1,0 +1,9 @@
+# How to deploy Mule 4 application using Mule Maven Plugin
+
+## Build the application
+To just build the jar, run `mvn clean package`. This will generate the jar file in `target` folder.
+
+## Deploy pre-generated jar file
+It is possible to deploy the jar file without rebuilding -
+
+mvn org.mule.tools.maven:mule-maven-plugin:deploy -Danypoint.username=${username} -Danypoint.password=${password} -Dmule.artifact=mule4-maven-deployment-demo-app-1.0.0-SNAPSHOT-mule-application.jar
